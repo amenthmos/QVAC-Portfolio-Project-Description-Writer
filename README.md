@@ -21,6 +21,15 @@ Built on [Tether's QVAC SDK](https://www.npmjs.com/package/@qvac/sdk) — all in
 
 Every technology you list is guaranteed to appear in the final description — checked deterministically in code, so nothing gets silently dropped.
 
+## Example
+
+**Input:** what it does `lets small business owners generate and send invoices from their phone`, tech `Flutter, Firebase, Stripe API`
+
+**Output:**
+```
+Developed a mobile app that enables small business owners to quickly generate and send professional-looking invoices directly from their phone. The app uses Flutter for a seamless user experience, integrates with Firebase for secure payment processing with Stripe, and includes a backend API for easy data storage and retrieval. Also built with Stripe API.
+```
+
 ## License
 
 MIT
