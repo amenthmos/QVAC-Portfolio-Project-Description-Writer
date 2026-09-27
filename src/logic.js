@@ -77,8 +77,11 @@ export async function generate(modelId, whatItDoes, techList) {
   const lowerDesc = description.toLowerCase();
   const missing = techItems.filter((t) => !lowerDesc.includes(t.toLowerCase()));
   if (missing.length > 0) {
+    // Only append the items that were actually dropped — restating every
+    // listed technology (including ones already mentioned) made the
+    // description needlessly redundant.
     description = description.replace(/[.!?]?\s*$/, "");
-    description += `. Built with ${techItems.join(", ")}.`;
+    description += `. Also built with ${missing.join(", ")}.`;
   }
 
   return { description };
